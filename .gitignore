@@ -1,5 +1,7 @@
 .DS_Store
 
+.routify/sitemap.default.txt
+
 node_modules
 
 app/dist
