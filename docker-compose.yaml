@@ -1,0 +1,22 @@
+
+services:
+    vite-routify-sample-app:
+        # build:
+        #     # context: ./node
+        #     context: .
+        #     dockerfile: Dockerfile
+        image: node:22.9.0
+        # image: node:22-slim
+        # image: node:20-bookworm-slim
+        volumes:
+            - ./app:/var/www/html
+        ports:
+            - 8080:1337
+            # - 8080:5173
+        tty: true
+        working_dir: /var/www/html
+        environment:
+            - NODE_ENV=development
+        # command: "npm run dev"
+        command: "sh bin/dev"
+        # command: "ls -la"
